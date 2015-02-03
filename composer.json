@@ -1,0 +1,21 @@
+{
+    "name": "yii2mod/yii2-ion-slider",
+    "description": "Ion Slider widget based on Ion.RangeSlider extension {@link http://ionden.com/a/plugins/ion.rangeSlider/en.html)",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "module"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Igor Chepurnoy",
+            "email": "igorzfort@gmail.com"
+        }
+    ],
+    "require": {
+        "yii2mod/yii2-user": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "yii2mod\\slider\\": ""
+        }
+    }
+}
