@@ -43,7 +43,7 @@ echo $form->field($model, "option")->widget(IonSlider::className(), [
 2) Usage without ActiveForm and model
 ```php
 echo IonSlider::widget([
-        'name' => "[$key-preview]skillsYearExperience",
+        'name' => "slider",
         'pluginOptions' => [
            'min' => 0,
            'max' => 20,
