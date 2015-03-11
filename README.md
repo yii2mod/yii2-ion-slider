@@ -28,17 +28,17 @@ Once the extension is installed, simply add widget to your page as follows:
 1) Usage with ActiveForm and model
 ```php
 echo $form->field($model, "option")->widget(IonSlider::className(), [
-                        'pluginOptions' => [
-                            'min' => 0,
-                            'max' => 1,
-                            'step' => 1,
-                            'onChange' => new \yii\web\JsExpression('
-                                function(data) {
-                                    console.log(data);
-                                }
-                            '),
-                        ],
-                    ]); 
+        'pluginOptions' => [
+           'min' => 0,
+           'max' => 1,
+           'step' => 1,
+           'onChange' => new \yii\web\JsExpression('
+                function(data) {
+                     console.log(data);
+                }
+           ')
+         ]
+]); 
 ```
 2) Usage without ActiveForm and model
 ```php
