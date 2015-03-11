@@ -40,7 +40,20 @@ echo $form->field($model, "option")->widget(IonSlider::className(), [
                         ],
                     ]); 
 ```
-
+2) Usage without ActiveForm and model
+```php
+echo IonSlider::widget([
+        'name' => "[$key-preview]skillsYearExperience",
+        'pluginOptions' => [
+           'min' => 0,
+           'max' => 20,
+           'step' => 1,
+           'hide_min_max' => true,
+           'hide_from_to' => true
+        ]
+]);
+                                
+```
 Slider Options 
 ----------------
 You can find them on the [options page](http://ionden.com/a/plugins/ion.rangeSlider/en.html)
