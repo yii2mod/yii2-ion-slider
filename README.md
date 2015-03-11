@@ -27,7 +27,7 @@ Once the extension is installed, simply add widget to your page as follows:
 
 1) Usage with ActiveForm and model
 ```php
-echo $form->field($model, "option")->widget(IonSlider::className(), [
+echo $form->field($model, "attribute")->widget(IonSlider::className(), [
         'pluginOptions' => [
            'min' => 0,
            'max' => 1,
