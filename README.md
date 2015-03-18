@@ -54,6 +54,21 @@ echo IonSlider::widget([
 ]);
                                 
 ```
+- For change slider skin, you have to configure the assetManager array in your application configuration: 
+```php
+'assetManager' => [
+            'bundles' => [
+                'yii2mod\slider\IonSliderAsset' => [
+                    'css' => [
+                        'css/normalize.css',
+                        'css/ion.rangeSlider.css',
+                        'css/ion.rangeSlider.skinFlat.css'
+                     ]
+                ],
+            ],
+        ]
+```
+
 Slider Options 
 ----------------
 You can find them on the [options page](http://ionden.com/a/plugins/ion.rangeSlider/en.html)
