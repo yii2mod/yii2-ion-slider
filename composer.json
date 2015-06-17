@@ -3,7 +3,7 @@
     "description": "Ion Slider widget based on Ion.RangeSlider extension {@link http://ionden.com/a/plugins/ion.rangeSlider/en.html)",
     "type": "yii2-extension",
     "keywords": ["yii2", "module"],
-    "license": "Apache-2.0",
+    "license": "MIT",
     "authors": [
         {
             "name": "Igor Chepurnoy",
