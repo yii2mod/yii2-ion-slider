@@ -44,9 +44,12 @@ echo $form->field($model, "attribute")->widget(IonSlider::className(), [
 ```php
 echo IonSlider::widget([
         'name' => "slider",
+        'type' => "double",
         'pluginOptions' => [
            'min' => 0,
            'max' => 20,
+           'from' => 2,
+           'to' => 18,
            'step' => 1,
            'hide_min_max' => true,
            'hide_from_to' => true
@@ -54,7 +57,7 @@ echo IonSlider::widget([
 ]);
                                 
 ```
-- For change slider skin, you have to configure the assetManager array in your application configuration: 
+- To change the slider skin, you can configure the assetManager array in your application configuration: 
 ```php
 'assetManager' => [
             'bundles' => [
@@ -71,4 +74,5 @@ echo IonSlider::widget([
 
 Slider Options 
 ----------------
-You can find them on the [options page](http://ionden.com/a/plugins/ion.rangeSlider/en.html)
+You can customize the slider using `pluginOptions`, using one of the plugin [options](http://ionden.com/a/plugins/ion.rangeSlider/en.html).
+Note that the `type` option should be configured on its own, and is not part of the `pluginOptions` array.
