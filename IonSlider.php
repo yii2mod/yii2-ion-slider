@@ -71,8 +71,9 @@ class IonSlider extends InputWidget
      */
     public function getPluginOptions()
     {
-        $this->pluginOptions['type'] = $this->type;
-
+        if (!isset($this->pluginOptions['type'])) {
+            $this->pluginOptions['type'] = $this->type;
+        }
         return Json::encode($this->pluginOptions);
     }
 
