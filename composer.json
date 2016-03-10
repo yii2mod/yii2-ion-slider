@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "bower-asset/ion.rangeSlider": "*"
+        "bower-asset/ionrangeslider": "*"
     },
     "autoload": {
         "psr-4": {
