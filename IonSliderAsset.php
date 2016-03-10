@@ -14,7 +14,7 @@ class IonSliderAsset extends AssetBundle
     /**
      * @var string
      */
-    public $sourcePath = '@bower/ion.rangeslider';
+    public $sourcePath = '@bower/ionrangeslider';
 
     /**
      * @var array
