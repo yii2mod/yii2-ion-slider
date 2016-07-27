@@ -2,7 +2,7 @@
 
 namespace yii2mod\slider;
 
-use yii\base\InvalidConfigException;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\widgets\InputWidget;
@@ -14,10 +14,19 @@ use yii\widgets\InputWidget;
 class IonSlider extends InputWidget
 {
     /**
-     * @var array the HTML attributes for the input tag.
-     * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
+     * Single type of the slider
      */
-    public $options = [];
+    const TYPE_SINGLE = 'single';
+
+    /**
+     * Double type of the slider
+     */
+    const TYPE_DOUBLE = 'double';
+
+    /**
+     * @var string the type of the slider. Defaults to `TYPE_SINGLE`
+     */
+    public $type = self::TYPE_SINGLE;
 
     /**
      * @var array plugin options
@@ -25,23 +34,8 @@ class IonSlider extends InputWidget
     public $pluginOptions = [];
 
     /**
-     * Slider type - single, double
-     * @var string
-     */
-    public $type = 'single';
-
-    /**
-     * Initializes the object.
-     * This method is invoked at the end of the constructor after the object is initialized with the
-     * given configuration.
-     */
-    public function init()
-    {
-        parent::init();
-    }
-
-    /**
      * Render range slider
+     *
      * @return string|void
      */
     public function run()
@@ -51,6 +45,7 @@ class IonSlider extends InputWidget
         } else {
             echo Html::textInput($this->name, $this->value, $this->options);
         }
+
         $this->registerAssets();
     }
 
@@ -61,29 +56,19 @@ class IonSlider extends InputWidget
     {
         $view = $this->getView();
         IonSliderAsset::register($view);
-        $js = '$("#' . $this->getInputId() . '").ionRangeSlider(' . $this->getPluginOptions() . ');';
+        $js = '$("#' . $this->options['id'] . '").ionRangeSlider(' . $this->getPluginOptions() . ');';
         $view->registerJs($js, $view::POS_END);
     }
 
     /**
      * Return plugin options in json format
+     *
      * @return string
      */
     public function getPluginOptions()
     {
-        if (!isset($this->pluginOptions['type'])) {
-            $this->pluginOptions['type'] = $this->type;
-        }
-        return Json::encode($this->pluginOptions);
-    }
+        $this->pluginOptions['type'] = ArrayHelper::getValue($this->pluginOptions, 'type', $this->type);
 
-    /**
-     * Return select id
-     * @return mixed
-     * @throws InvalidConfigException
-     */
-    public function getInputId()
-    {
-        return $this->options['id'];
+        return Json::encode($this->pluginOptions);
     }
 }

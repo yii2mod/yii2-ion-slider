@@ -10,7 +10,6 @@ use yii\web\AssetBundle;
  */
 class IonSliderAsset extends AssetBundle
 {
-
     /**
      * @var string
      */

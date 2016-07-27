@@ -31,7 +31,7 @@ Once the extension is installed, simply add widget to your page as follows:
 
 1) Usage with ActiveForm and model
 ```php
-echo $form->field($model, "attribute")->widget(IonSlider::className(), [
+echo $form->field($model, "attribute")->widget(\yii2mod\slider\IonSlider::className(), [
         'pluginOptions' => [
            'min' => 0,
            'max' => 1,
@@ -46,22 +46,22 @@ echo $form->field($model, "attribute")->widget(IonSlider::className(), [
 ```
 2) Usage without ActiveForm and model
 ```php
-echo IonSlider::widget([
-        'name' => "slider",
-        'type' => "double",
-        'pluginOptions' => [
-           'min' => 0,
-           'max' => 20,
-           'from' => 2,
-           'to' => 18,
-           'step' => 1,
-           'hide_min_max' => true,
-           'hide_from_to' => true
-        ]
+echo \yii2mod\slider\IonSlider::widget([
+    'name' => 'slider',
+    'type' => \yii2mod\slider\IonSlider::TYPE_DOUBLE,
+    'pluginOptions' => [
+        'min' => 0,
+        'max' => 20,
+        'from' => 2,
+        'to' => 18,
+        'step' => 1,
+        'hide_min_max' => true,
+        'hide_from_to' => true
+    ]
 ]);
                                 
 ```
-- To change the slider skin, you can configure the assetManager array in your application configuration: 
+**To change the slider skin, you can configure the assetManager array in your application configuration:** 
 ```php
 'assetManager' => [
             'bundles' => [
