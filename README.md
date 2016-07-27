@@ -1,4 +1,4 @@
-Ion Range Slider Widget for Yii 2
+Ion.RangeSlider Widget for Yii 2
 =========
 Widget based on Ion.RangeSlider extension http://ionden.com/a/plugins/ion.rangeSlider/en.html
 
