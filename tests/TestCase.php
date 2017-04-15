@@ -2,14 +2,14 @@
 
 namespace yii2mod\slider\tests;
 
-use yii\helpers\ArrayHelper;
 use Yii;
+use yii\helpers\ArrayHelper;
 use yii\helpers\FileHelper;
 
 /**
  * This is the base class for all yii framework unit tests.
  */
-class TestCase extends \PHPUnit_Framework_TestCase
+class TestCase extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()
     {
@@ -27,6 +27,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
     /**
      * Populates Yii::$app with a new application
      * The application will be destroyed on tearDown() automatically.
+     *
      * @param array $config The application configuration, if needed
      * @param string $appClass name of the application class to create
      */
@@ -39,7 +40,7 @@ class TestCase extends \PHPUnit_Framework_TestCase
             'components' => [
                 'request' => [
                     'hostInfo' => 'http://domain.com',
-                    'scriptUrl' => 'index.php'
+                    'scriptUrl' => 'index.php',
                 ],
                 'assetManager' => [
                     'basePath' => $this->getTestFilePath(),
@@ -66,7 +67,8 @@ class TestCase extends \PHPUnit_Framework_TestCase
 
     /**
      * Returns the test file path.
-     * @return string file path.
+     *
+     * @return string file path
      */
     protected function getTestFilePath()
     {

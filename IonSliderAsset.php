@@ -6,6 +6,7 @@ use yii\web\AssetBundle;
 
 /**
  * Class IonSliderAsset
+ *
  * @package yii2mod\slider
  */
 class IonSliderAsset extends AssetBundle
@@ -21,7 +22,7 @@ class IonSliderAsset extends AssetBundle
     public $css = [
         'css/normalize.css',
         'css/ion.rangeSlider.css',
-        'css/ion.rangeSlider.skinHTML5.css'
+        'css/ion.rangeSlider.skinHTML5.css',
     ];
 
     /**
@@ -35,6 +36,6 @@ class IonSliderAsset extends AssetBundle
      * @var array
      */
     public $depends = [
-        'yii\web\YiiAsset'
+        'yii\web\YiiAsset',
     ];
 }

@@ -9,6 +9,7 @@ use yii\widgets\InputWidget;
 
 /**
  * Class IonSlider
+ *
  * @package yii2mod\slider
  */
 class IonSlider extends InputWidget

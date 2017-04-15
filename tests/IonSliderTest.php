@@ -8,6 +8,7 @@ use yii2mod\slider\IonSlider;
 
 /**
  * Class IonSliderTest
+ *
  * @package yii2mod\slider\tests
  */
 class IonSliderTest extends TestCase
@@ -26,8 +27,8 @@ class IonSliderTest extends TestCase
                 'to' => 18,
                 'step' => 1,
                 'hide_min_max' => true,
-                'hide_from_to' => true
-            ]
+                'hide_from_to' => true,
+            ],
         ]);
 
         $this->assertEquals(Html::activeTextInput($model, 'price'), $widget);
@@ -44,7 +45,7 @@ class IonSliderTest extends TestCase
                 'from' => 2,
                 'to' => 18,
                 'step' => 1,
-            ]
+            ],
         ]);
 
         $this->assertEquals(Html::textInput('price', null, ['id' => 'w0']), $widget);
