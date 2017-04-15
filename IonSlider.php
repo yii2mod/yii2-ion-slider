@@ -37,17 +37,17 @@ class IonSlider extends InputWidget
     /**
      * Render range slider
      *
-     * @return string|void
+     * @return string
      */
     public function run()
     {
+        $this->registerAssets();
+
         if ($this->hasModel()) {
-            echo Html::activeTextInput($this->model, $this->attribute, $this->options);
-        } else {
-            echo Html::textInput($this->name, $this->value, $this->options);
+            return Html::activeTextInput($this->model, $this->attribute, $this->options);
         }
 
-        $this->registerAssets();
+        return Html::textInput($this->name, $this->value, $this->options);
     }
 
     /**
@@ -57,8 +57,7 @@ class IonSlider extends InputWidget
     {
         $view = $this->getView();
         IonSliderAsset::register($view);
-        $js = '$("#' . $this->options['id'] . '").ionRangeSlider(' . $this->getPluginOptions() . ');';
-        $view->registerJs($js, $view::POS_END);
+        $view->registerJs('$("#' . $this->options['id'] . '").ionRangeSlider(' . $this->getPluginOptions() . ');');
     }
 
     /**
@@ -66,7 +65,7 @@ class IonSlider extends InputWidget
      *
      * @return string
      */
-    public function getPluginOptions()
+    protected function getPluginOptions()
     {
         $this->pluginOptions['type'] = ArrayHelper::getValue($this->pluginOptions, 'type', $this->type);
 
