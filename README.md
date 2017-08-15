@@ -1,6 +1,12 @@
-Ion.RangeSlider Widget for Yii 2
-=========
-Widget based on Ion.RangeSlider extension http://ionden.com/a/plugins/ion.rangeSlider/en.html
+<p align="center">
+    <a href="https://github.com/yiisoft" target="_blank">
+        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
+    </a>
+    <h1 align="center">RangeSlider Extension for Yii 2</h1>
+    <br>
+</p>
+
+Widget based on [Ion.RangeSlider extension](http://ionden.com/a/plugins/ion.rangeSlider/en.html)
 
 [![Latest Stable Version](https://poser.pugx.org/yii2mod/yii2-ion-slider/v/stable)](https://packagist.org/packages/yii2mod/yii2-ion-slider) 
 [![Total Downloads](https://poser.pugx.org/yii2mod/yii2-ion-slider/downloads)](https://packagist.org/packages/yii2mod/yii2-ion-slider) 
