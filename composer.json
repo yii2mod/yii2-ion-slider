@@ -27,9 +27,10 @@
             "yii2mod\\slider\\": ""
         }
     },
-    "extra": {
-        "asset-installer-paths": {
-            "bower-asset-library": "vendor/bower"
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
-    }
+    ]
 }
